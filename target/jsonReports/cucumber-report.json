@@ -1,0 +1,212 @@
+[ {
+  "line" : 1,
+  "elements" : [ {
+    "start_timestamp" : "2022-08-23T04:33:18.343Z",
+    "line" : 13,
+    "name" : "Verify if Place is being Successfully added using AddPlaceAPI",
+    "description" : "",
+    "id" : "validating-place-api;verify-if-place-is-being-successfully-added-using-addplaceapi;;2",
+    "type" : "scenario",
+    "keyword" : "Scenario Outline",
+    "steps" : [ {
+      "result" : {
+        "duration" : 1556793200,
+        "status" : "passed"
+      },
+      "line" : 4,
+      "name" : "Add Place Payload with \"Abhishek Mauni\" \"Hindi-India\" \"Bhimtal\"",
+      "match" : {
+        "arguments" : [ {
+          "val" : "\"Abhishek Mauni\"",
+          "offset" : 23
+        }, {
+          "val" : "\"Hindi-India\"",
+          "offset" : 40
+        }, {
+          "val" : "\"Bhimtal\"",
+          "offset" : 54
+        } ],
+        "location" : "stepDefinitions.StepDefination.add_place_payload_with(java.lang.String,java.lang.String,java.lang.String)"
+      },
+      "keyword" : "Given "
+    }, {
+      "result" : {
+        "duration" : 3350831100,
+        "status" : "passed"
+      },
+      "line" : 5,
+      "name" : "user calls \"AddPlaceAPI\" with \"Post\" http request",
+      "match" : {
+        "arguments" : [ {
+          "val" : "\"AddPlaceAPI\"",
+          "offset" : 11
+        }, {
+          "val" : "\"Post\"",
+          "offset" : 30
+        } ],
+        "location" : "stepDefinitions.StepDefination.user_calls_with_http_request(java.lang.String,java.lang.String)"
+      },
+      "keyword" : "When "
+    }, {
+      "result" : {
+        "status" : "passed"
+      },
+      "line" : 6,
+      "name" : "the API call is success with status code 200",
+      "match" : {
+        "arguments" : [ {
+          "val" : "200",
+          "offset" : 41
+        } ],
+        "location" : "stepDefinitions.StepDefination.the_api_call_is_success_with_status_code(java.lang.Integer)"
+      },
+      "keyword" : "Then "
+    }, {
+      "result" : {
+        "duration" : 742270900,
+        "status" : "passed"
+      },
+      "line" : 7,
+      "name" : "\"status\" in response body is \"OK\"",
+      "match" : {
+        "arguments" : [ {
+          "val" : "\"status\"",
+          "offset" : 0
+        }, {
+          "val" : "\"OK\"",
+          "offset" : 29
+        } ],
+        "location" : "stepDefinitions.StepDefination.in_response_body_is(java.lang.String,java.lang.String)"
+      },
+      "keyword" : "And "
+    }, {
+      "result" : {
+        "duration" : 18949200,
+        "status" : "passed"
+      },
+      "line" : 8,
+      "name" : "\"scope\" in response body is \"APP\"",
+      "match" : {
+        "arguments" : [ {
+          "val" : "\"scope\"",
+          "offset" : 0
+        }, {
+          "val" : "\"APP\"",
+          "offset" : 28
+        } ],
+        "location" : "stepDefinitions.StepDefination.in_response_body_is(java.lang.String,java.lang.String)"
+      },
+      "keyword" : "And "
+    }, {
+      "result" : {
+        "duration" : 667198500,
+        "status" : "passed"
+      },
+      "line" : 9,
+      "name" : "verify place_Id created maps to \"Abhishek Mauni\" using \"GetPlaceAPI\"",
+      "match" : {
+        "arguments" : [ {
+          "val" : "\"Abhishek Mauni\"",
+          "offset" : 32
+        }, {
+          "val" : "\"GetPlaceAPI\"",
+          "offset" : 55
+        } ],
+        "location" : "stepDefinitions.StepDefination.verify_place_id_created_maps_to_using(java.lang.String,java.lang.String)"
+      },
+      "keyword" : "And "
+    } ],
+    "tags" : [ {
+      "name" : "@AddPlace"
+    } ]
+  }, {
+    "start_timestamp" : "2022-08-23T04:33:24.740Z",
+    "before" : [ {
+      "result" : {
+        "duration" : 997800,
+        "status" : "passed"
+      },
+      "match" : {
+        "location" : "stepDefinitions.Hooks.beforeScenario()"
+      }
+    } ],
+    "line" : 16,
+    "name" : "Verify if Delete Place functionality is working",
+    "description" : "",
+    "id" : "validating-place-api;verify-if-delete-place-functionality-is-working",
+    "type" : "scenario",
+    "keyword" : "Scenario",
+    "steps" : [ {
+      "result" : {
+        "duration" : 2991300,
+        "status" : "passed"
+      },
+      "line" : 17,
+      "name" : "DeletePlace Payload",
+      "match" : {
+        "location" : "stepDefinitions.StepDefination.delete_place_payload()"
+      },
+      "keyword" : "Given "
+    }, {
+      "result" : {
+        "duration" : 740374000,
+        "status" : "passed"
+      },
+      "line" : 18,
+      "name" : "user calls \"DeletePlaceAPI\" with \"Post\" http request",
+      "match" : {
+        "arguments" : [ {
+          "val" : "\"DeletePlaceAPI\"",
+          "offset" : 11
+        }, {
+          "val" : "\"Post\"",
+          "offset" : 33
+        } ],
+        "location" : "stepDefinitions.StepDefination.user_calls_with_http_request(java.lang.String,java.lang.String)"
+      },
+      "keyword" : "When "
+    }, {
+      "result" : {
+        "duration" : 995200,
+        "status" : "passed"
+      },
+      "line" : 19,
+      "name" : "the API call is success with status code 200",
+      "match" : {
+        "arguments" : [ {
+          "val" : "200",
+          "offset" : 41
+        } ],
+        "location" : "stepDefinitions.StepDefination.the_api_call_is_success_with_status_code(java.lang.Integer)"
+      },
+      "keyword" : "Then "
+    }, {
+      "result" : {
+        "duration" : 67905500,
+        "status" : "passed"
+      },
+      "line" : 20,
+      "name" : "\"status\" in response body is \"OK\"",
+      "match" : {
+        "arguments" : [ {
+          "val" : "\"status\"",
+          "offset" : 0
+        }, {
+          "val" : "\"OK\"",
+          "offset" : 29
+        } ],
+        "location" : "stepDefinitions.StepDefination.in_response_body_is(java.lang.String,java.lang.String)"
+      },
+      "keyword" : "And "
+    } ],
+    "tags" : [ {
+      "name" : "@DeletePlace"
+    } ]
+  } ],
+  "name" : "Validating Place API",
+  "description" : "",
+  "id" : "validating-place-api",
+  "keyword" : "Feature",
+  "uri" : "file:src/test/java/features/placeValidation.feature",
+  "tags" : [ ]
+} ]
